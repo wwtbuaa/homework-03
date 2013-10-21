@@ -41,7 +41,7 @@ void calc(int h,int v)
 		for (i = 1;i <= m;i++)
 		for (j = i;j <= m * 2;j++)
 		{
-			if ((j - i) <= m)
+			if ((j - i) < m)
 			{
 				temp = 0;top = 1;
 				for (k = 1;k <= n;k++)
@@ -76,7 +76,7 @@ void calc(int h,int v)
 		for (i = 1;i <= n;i++)
 		for (j = i;j <= n * 2;j++)
 		{
-			if ((j - i) <= n)
+			if ((j - i) < n)
 			{
 				temp = 0;top = 1;
 				for (k = 1;k <= m;k++)
@@ -111,7 +111,7 @@ void calc(int h,int v)
 		for (i = 1;i <= m;i++)
 		for (j = i;j <= m;j++)
 		{
-			if ((j - i) <= m)
+			if ((j - i) < m)
 			{
 				temp = 0;top = 1;
 				for (k = 1;k <= n;k++)
@@ -147,7 +147,7 @@ void calc(int h,int v)
 		for (i = 1;i <= m;i++)
 		for (j = i;j <= m * 2;j++)
 		{
-			if ((j - i) <= m)
+			if ((j - i) < m)
 			{
 				temp = 0;length = 0;top = 1;
 				for (k = 1;k <= n * 2;k++)
@@ -182,7 +182,8 @@ void calc(int h,int v)
 }
 int main()
 {
-	calc(0,0);
+	calc(1,1);
 	printf("%d\n",ans);
+	printf("%d %d\n%d %d\n",begin_x,begin_y,end_x,end_y); 
 	return 0;
 }
